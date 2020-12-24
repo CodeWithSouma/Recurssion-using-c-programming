@@ -2,12 +2,12 @@
 # include<stdio.h>
 
 int sum(int number){
-    if (number == 0)
+    if (number == 1)
     {
-        return 0;
+        return 1;
     }
     
-    return number + sum(number - 1);
+    return number + sum(number - 1);// at last return the value to caller
 }
 
 void main(){
@@ -17,6 +17,6 @@ void main(){
 
     //calculate sum
     int result = sum(number);
-    printf("Sum of 1 to %d : %d ",number,result);
+    printf("Sum of 1 to %d : %d \n",number,result);
 }
 
