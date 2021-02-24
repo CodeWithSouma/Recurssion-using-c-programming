@@ -1,8 +1,9 @@
 public class recurssion {
 
     public static void main(String[] args) {
-        int result = power(2,3);
+        int result = fibonacci(5);
         System.out.println(result);
+        
     }
 
     // sum of n natural number
@@ -28,5 +29,20 @@ public class recurssion {
 
         return n * power(n, p - 1);
     }
+
+    // factorial of n claculate using recurssion
+    public static int factorial(int n){
+        if(n == 0) return 1;
+        return n * factorial(n - 1);
+    }
+
+    // find the nth fibonacci number using recurssion   
+    public static int fibonacci(int n){
+        if (n == 0 || n == 1) 
+            return n;
+  
+        return fibonacci(n - 1) + fibonacci(n - 2);
+    }
+
 
 }
