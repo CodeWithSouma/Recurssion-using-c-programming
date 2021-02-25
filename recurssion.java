@@ -2,13 +2,9 @@
 public class recurssion {
 
     public static void main(String[] args) {
-        // int [] array = {10,20,30,40,50};
-        // var result = arrayIsSortedOrNot(array,array.length);
-        // System.out.println(result);
-
-        printDec(5);
-        System.out.println();
-        printInc(5);
+        int [] array = {10,20,30,40,50,20};
+        var result = firstOccurence(array,0,array.length,60);
+        System.out.println(result);
         
     }
 
@@ -72,5 +68,13 @@ public class recurssion {
         printInc(n - 1);
         System.out.print(n + " \t");
     }
+
+    // find first occurence of the key in the array
+    public static int firstOccurence(int[] array,int i, int size, int key){
+        if(size == i) return -1;
+        if(array[i] == key) return i;
+        return firstOccurence(array, i + 1, size, key);
+    }
+    // find last occurence of the key in the array
 
 }
