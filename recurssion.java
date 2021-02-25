@@ -3,7 +3,7 @@ public class recurssion {
 
     public static void main(String[] args) {
         int [] array = {10,20,30,40,50,20};
-        var result = firstOccurence(array,0,array.length,60);
+        var result = lastOccurence(array,0,array.length,20);
         System.out.println(result);
         
     }
@@ -76,5 +76,12 @@ public class recurssion {
         return firstOccurence(array, i + 1, size, key);
     }
     // find last occurence of the key in the array
+    public static int lastOccurence(int [] array, int i, int size, int key){
+        if(size == i) return -1;
+        int restArray = lastOccurence(array, i + 1, size, key); 
+        if(restArray != -1) return restArray;
+        if (array[i] == key) return i;
+        return -1;
+    }
 
 }
