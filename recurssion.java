@@ -1,13 +1,6 @@
 
 public class recurssion {
 
-    public static void main(String[] args) {
-        int [] array = {10,20,30,40,50,20};
-        var result = lastOccurence(array,0,array.length,20);
-        System.out.println(result);
-        
-    }
-
     // sum of n natural number
     public static int sum(int n) {
         if (n == 1)
@@ -82,6 +75,21 @@ public class recurssion {
         if(restArray != -1) return restArray;
         if (array[i] == key) return i;
         return -1;
+    }
+
+    // Reverse a sttring using recurssion
+    public static void reverse(String string){
+        if(string.length() == 0) return;
+        reverse(string.substring(1,string.length()));
+        System.out.print(string.charAt(0));
+    }
+
+
+    public static void main(String[] args) {
+       String string = "Souma";
+       reverse(string);
+       System.out.println();
+        
     }
 
 }
