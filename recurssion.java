@@ -110,9 +110,17 @@ public class recurssion {
         }
     }
 
+    // tower of hanoi problem using recurssion 
+    public static void towerOfHanoi(int n, char source, char dest, char helper){
+        if (n == 0) return;
+        towerOfHanoi(n - 1, source, helper, dest);
+        System.out.println("Move from " + source + " to " + dest);
+        towerOfHanoi(n - 1, helper, dest, source);
+
+    }
+
     public static void main(String[] args) {
-        String string = "pippppiiiipi";
-        replacePi(string);
+        towerOfHanoi(3,'A','C','B');
         System.out.println();
 
     }
